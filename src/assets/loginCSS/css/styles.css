@@ -1,0 +1,92 @@
+:root{
+    --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+    --transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+}
+
+.logingSection{
+    display:flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.logingSection h1{
+    font-size: 3em;
+}
+
+.logingSection h2{
+    text-align:center;
+    width: 100%;
+    margin-bottom: 1em;
+    font-size: 2.5em;
+    color: rgb(180, 260, 70);
+    animation: glow 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff;
+    }
+}
+
+.logingSection form{
+    padding: 1.5em;
+    display:flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    border-radius: 20px;
+    border: 2px solid rgba(0,0,0,.1);
+    background-color: hsla(244, 16%, 92%, 0.2);
+    border: 2px solid hsla(244, 16%, 92%, 0.75);
+    backdrop-filter: blur(20px);
+}
+
+.logingSection form label{
+    width: 100%;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+.logingSection form input{
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0.8em;
+    border-radius: 9px;
+    border: none;
+    outline-color: #3a043a;
+    background-color: #eee;
+}
+
+.logingSection form input[type='submit']{
+    margin-top: 1.5em;
+    background-color: #3a043a;
+    color: #fff;
+    font-family: var(--font-mono);
+    transition: var(--transition);
+} 
+
+.logingSection form input[type='submit']:active{
+    transform: scale(0.97);
+}
+
+.logingSection p{
+    margin-top: 1.5em;
+
+}
+
+
+.logingSection p a{
+    text-decoration: none;
+    color: rgb(180, 260, 70);
+}
+
+
+
